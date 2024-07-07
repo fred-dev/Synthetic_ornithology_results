@@ -9,7 +9,6 @@ const stopAllExcept = (currentWaveSurfer) => {
         }
     });
 };
-
 fetch("audio_pairs.json") // Use the updated JSON with additional metadata
     .then((response) => response.json())
     .then((data) => {
@@ -22,8 +21,10 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             heading.textContent = `Recorded species: ${pair.name}`;
             pairContainer.appendChild(heading);
 
-            const audioRow = document.createElement("div");
-            audioRow.className = "audio-container";
+            const fad_score = document.createElement("p");
+            fad_score.className = "fad-score"; // Add this class for specific styling
+            fad_score.innerHTML = `<strong>Frechet audio distance: </strong> ${pair.fad_score}`;
+            pairContainer.appendChild(fad_score);
 
             const conditionContainer = document.createElement("div");
             conditionContainer.className = "condition-container";
@@ -56,9 +57,8 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             windText.innerHTML = `<strong>Wind Speed:</strong> ${pair.windSpeed} m/s`;
             conditionContainer.appendChild(windText);
 
-            const fad_score = document.createElement("p");
-            fad_score.innerHTML = `<strong>Frechet audio distance: </strong> ${pair.fad_score}`;
-            conditionContainer.appendChild(fad_score);
+            const audioRow = document.createElement("div");
+            audioRow.className = "audio-container";
 
             const originalWaveformContainer = document.createElement("div");
             originalWaveformContainer.className = "waveform-container";
@@ -85,13 +85,13 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             originalWaveformContainer.appendChild(originalWaveform);
             generatedWaveformContainer.appendChild(generatedWaveform);
 
-            audioRow.appendChild(conditionContainer);
             audioRow.appendChild(originalLabel);
             audioRow.appendChild(originalWaveformContainer);
             audioRow.appendChild(generatedLabel);
             audioRow.appendChild(generatedWaveformContainer);
 
             pairContainer.appendChild(audioRow);
+            pairContainer.appendChild(conditionContainer);
             container.appendChild(pairContainer);
 
             // Create WaveSurfer instances with media controls

@@ -3,6 +3,7 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
 }
+
 .pair-container {
     margin-bottom: 20px;
     background: #fff;
@@ -10,12 +11,14 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .audio-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 10px;
 }
+
 .waveform-container {
     width: 40%;
     position: relative;
@@ -24,29 +27,63 @@ body {
     gap: 20px; /* Add more space between waveform and control elements */
     padding: 20px; /* Add padding to prevent overlap and for a bigger container */
 }
+
 .condition-container {
-    width: 20%;
-    padding: 20px; /* Add padding for the conditioning data */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 95%; /* Ensure the text does not extend beyond 95% of the container */
 }
+
 .condition-container p {
     margin: 0; /* Remove margin between lines */
+    text-align: left; /* Ensure all text is left-aligned */
+    width: 100%; /* Ensure all text fills the container width */
 }
+
 .waveform {
     width: 100%;
     height: 100px;
 }
+
+audio {
+    width: 85%; /* Set the audio width to 85% of its container */
+    max-width: 85%; /* Ensure the audio does not exceed 85% */
+    margin: 0 auto; /* Center the audio element horizontally */
+    display: block;
+}
+
 .audio-label {
     font-weight: bold;
     width: 10%;
     text-align: center;
+    margin: 10px 0; /* Add space before and after label */
 }
+
 .player-controls {
     margin-top: 20px; /* Add padding above the controls */
     padding-bottom: 20px; /* Add padding below the controls */
+    text-align: left; /* Align controls to the left */
 }
+
+.fad-score {
+    font-size: 1em; /* Match font size with conditioning data */
+    margin: 20px 0; /* Add margin to separate from other elements */
+    text-align: left; /* Align the Frechet audio distance to the left */
+}
+
 h2 {
     margin-top: 0;
+    text-align: left; /* Align heading to the left */
 }
+
+h3 {
+    margin-top: 20px;
+    text-align: left; /* Align the conditioning data heading to the left */
+}
+
 @media (max-width: 600px) {
     .audio-container {
         flex-direction: column;
@@ -57,5 +94,34 @@ h2 {
     .condition-container {
         width: 100%;
         text-align: left;
+    }
+    .waveform-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin-bottom: 10px; /* Add space between waveform containers for smaller screens */
+    }
+    .audio-label {
+        margin: 5px 0; /* Add space before and after label for smaller screens */
+    }
+    .fad-score {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+    .player-controls {
+        margin-top: 10px; /* Reduce margin for smaller screens */
+    }
+}
+
+@media (max-width: 350px) {
+    .waveform-container {
+        padding: 5px; /* Further reduce padding for very small screens */
+        margin-bottom: 5px; /* Further adjust space between waveform containers for very small screens */
+    }
+    .audio-label {
+        margin: 3px 0; /* Add space before and after label for very small screens */
+    }
+    .fad-score {
+        margin: 5px 0; /* Adjust margin for very small screens */
+    }
+    .player-controls {
+        margin-top: 5px; /* Further reduce margin for very small screens */
     }
 }
