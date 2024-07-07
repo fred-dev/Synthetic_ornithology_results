@@ -81,22 +81,6 @@
     },
     {
         "pair": 6,
-        "original": "Pair_6_O_173876741-Gain_07.wav",
-        "generated": "Pair_6_G_173876741_645000_Laughing_Kookaburra_cfg_scale_4.0-Gain_07.wav",
-        "name": "Laughing Kookaburra",
-        "originalTags": "173876741",
-        "placeName": "Samsonvale",
-        "latitude": -27.2685099,
-        "longitude": 152.8587437,
-        "dateName": "05:20:00 Saturday 24 August 2019",
-        "temperature": 9.02,
-        "humidity": 94,
-        "pressure": 1025,
-        "windSpeed": 1.5,
-        "fad_score": 7.98812190471181
-    },
-    {
-        "pair": 7,
         "original": "Pair_7_O_2009-09-16-18-09-55-Gain_08-01.wav",
         "generated": "Pair_7_G_2009-09-16-18-09-55-012_645000_Australasian_Figbird_cfg_scale_3.0-Gain_08.wav",
         "name": "Australasian Figbird",
@@ -112,7 +96,7 @@
         "fad_score": 13.179463409160608
     },
     {
-        "pair": 8,
+        "pair": 7,
         "original": "Pair_8_O_2012-08-16-19-05-37-Gain_09.wav",
         "generated": "Pair_8_G_2012-08-16-19-05-37-680_645000_Raja_Shelduck_cfg_scale_5.0-Gain_09.wav",
         "name": "Raja Shelduck",
@@ -128,7 +112,7 @@
         "fad_score": 14.183764649976746
     },
     {
-        "pair": 9,
+        "pair": 8,
         "original": "Pair_9_O_2015-10-15-09-34-47-Gain_10.wav",
         "generated": "Pair_9_G_2015-10-15-09-34-47-051_602500_Australian_Ringneck_cfg_scale_6.0-Gain_10.wav",
         "name": "Australian Ringneck",
@@ -144,7 +128,7 @@
         "fad_score": 8.868600009968311
     },
     {
-        "pair": 10,
+        "pair": 9,
         "original": "Pair_10_O_2016-09-06-08-35-34-Gain_11-01.wav",
         "generated": "Pair_10_G_2016-09-06-08-35-34-247_602500_Chirruping_Wedgebill_cfg_scale_8.0-Gain_11.wav",
         "name": "Chirruping Wedgebill",
@@ -160,7 +144,7 @@
         "fad_score": 19.29871756362365
     },
     {
-        "pair": 11,
+        "pair": 10,
         "original": "Pair_11_O_2018-08-14-17-37-10-Gain_12-01.wav",
         "generated": "Pair_11_G_2018-08-14-17-37-10-722_645000_Pied_Butcherbird_cfg_scale_5.0-Gain_12.wav",
         "name": "Pied Butcherbird",
@@ -176,7 +160,7 @@
         "fad_score": 8.293540794331713
     },
     {
-        "pair": 12,
+        "pair": 11,
         "original": "Pair_12_O_2018-08-20-02-07-14-Gain_13.wav",
         "generated": "Pair_12_G_2018-08-20-02-07-14-171_602500_Black-fronted_Dotterel_cfg_scale_13.0-Gain_13.wav",
         "name": "Black-fronted Dotterel",
@@ -192,7 +176,7 @@
         "fad_score": 15.935369188777877
     },
     {
-        "pair": 13,
+        "pair": 12,
         "original": "Pair_13_O_2019-10-19-19-39-33-Gain_14-01.wav",
         "generated": "Pair_13_G_2019-10-19-19-39-33-822_645000_Eastern_Barn_Owl_cfg_scale_5.0-Gain_14.wav",
         "name": "Eastern Barn Owl",
@@ -208,7 +192,7 @@
         "fad_score": 18.879641688694083
     },
     {
-        "pair": 14,
+        "pair": 13,
         "original": "Pair_14_O_2020-06-30-07-10-09-Gain_15.wav",
         "generated": "Pair_14_G_2020-06-30-07-10-09-289_645000_Pied_Currawong_cfg_scale_5.0-Gain_15.wav",
         "name": "Pied Currawong",
@@ -224,7 +208,7 @@
         "fad_score": 6.9160234826627
     },
     {
-        "pair": 15,
+        "pair": 14,
         "original": "Pair_15_O_2020-06-30-08-10-09-Gain_16-02.wav",
         "generated": "Pair_15_G_2020-06-30-08-10-09-293_645000_Australasian_Grebe_cfg_scale_5.0-Gain_16.wav",
         "name": "Australasian Grebe",
@@ -240,7 +224,7 @@
         "fad_score": 10.0575504150214
     },
     {
-        "pair": 16,
+        "pair": 15,
         "original": "Pair_16_O_2020-08-27-02-10-34-Gain_17.wav",
         "generated": "Pair_16_G_2020-08-27-02-10-34-713_645000_Black-fronted_Dotterel_cfg_scale_5.0-Gain_17.wav",
         "name": "Black-fronted Dotterel",
@@ -256,7 +240,7 @@
         "fad_score": 12.393974926890326
     },
     {
-        "pair": 17,
+        "pair": 16,
         "original": "Pair_17_O_2020-09-18-05-08-49-Gain_18.wav",
         "generated": "Pair_17_G_2020-09-18-05-08-49-421_645000_Pied_Butcherbird_cfg_scale_4.0-Gain_18.wav",
         "name": "Pied Butcherbird",
@@ -272,7 +256,7 @@
         "fad_score": 39.6773899839198
     },
     {
-        "pair": 18,
+        "pair": 17,
         "original": "Pair_18_O_2021-10-09-10-11-35-Gain_19-01.wav",
         "generated": "Pair_18_G_2021-10-09-10-11-35-200_645000_Galah_cfg_scale_4.0-Gain_19.wav",
         "name": "Galah",
@@ -288,7 +272,7 @@
         "fad_score": 14.333232529378524
     },
     {
-        "pair": 19,
+        "pair": 18,
         "original": "Pair_19_O_2023-01-15-23-02-56-Gain_20.wav",
         "generated": "Pair_19_G_2023-01-15-23-02-56-087_645000_Australasian_Swamphen_cfg_scale_5.0-Gain_20.wav",
         "name": "Australasian Swamphen",
@@ -304,7 +288,7 @@
         "fad_score": 5.864585194299199
     },
     {
-        "pair": 20,
+        "pair": 19,
         "original": "Pair_20_O_352329731-Gain_21.wav",
         "generated": "Pair_20_G_352329731_645000_Brown_Songlark_cfg_scale_2.0-Gain_21.wav",
         "name": "Brown Songlark",
