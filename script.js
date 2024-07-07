@@ -23,8 +23,9 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
 
             const fad_score = document.createElement("p");
             fad_score.className = "fad-score"; // Add this class for specific styling
-            fad_score.innerHTML = `<strong>Frechet audio distance: </strong> ${pair.fad_score}`;
+            fad_score.innerHTML = `<strong>Frechet audio distance: </strong> ${pair.fad_score.toFixed(4)}`;
             pairContainer.appendChild(fad_score);
+
 
             const conditionContainer = document.createElement("div");
             conditionContainer.className = "condition-container";
