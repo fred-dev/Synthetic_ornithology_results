@@ -1,4 +1,4 @@
-const rootPath = "audioSamples/"; // Set the root path for the audio files
+const rootPathPairs = "audioSamples/pairs/"; // Set the root path for the audio files
 const waveSurfers = []; // Array to keep track of WaveSurfer instances
 
 // Function to stop all playing audio except the one that is about to play
@@ -20,12 +20,6 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             const heading = document.createElement("h2");
             heading.textContent = `Recorded species: ${pair.name}`;
             pairContainer.appendChild(heading);
-
-            const fad_score = document.createElement("p");
-            fad_score.className = "fad-score"; // Add this class for specific styling
-            fad_score.innerHTML = `<strong>Frechet audio distance: </strong> ${pair.fad_score.toFixed(4)}`;
-            pairContainer.appendChild(fad_score);
-
 
             const conditionContainer = document.createElement("div");
             conditionContainer.className = "condition-container";
@@ -122,8 +116,8 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             });
 
             // Load audio files
-            originalWaveSurfer.load(rootPath + pair.original);
-            generatedWaveSurfer.load(rootPath + pair.generated);
+            originalWaveSurfer.load(rootPathPairs + pair.original);
+            generatedWaveSurfer.load(rootPathPairs + pair.generated);
 
             // Add instances to the array
             waveSurfers.push(originalWaveSurfer, generatedWaveSurfer);

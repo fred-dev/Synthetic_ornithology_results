@@ -1,0 +1,44 @@
+[
+    {
+      "label": "Song transfer",
+      "description": "The song patterns of one bird species were reproduced using the voice of another.",
+      "steps": 560000,
+      "cfg_scale": 5.0,
+      "filename": "2007-10-24-06-09-54-930_560000_Pied_Currawong_cfg_scale_5.0.wav"
+    },
+    {
+      "label": "Layering",
+      "description": "Bird calls that would not normally co-occur appeared together in generated samples.",
+      "steps": 394800,
+      "cfg_scale": 4.0,
+      "filename": "Australian_Magpie_2020-11-02-15-40-03-298_394800_cfg_scale_4.0.wav"
+    },
+    {
+      "label": "Background variation",
+      "description": "Birds singing during daytime accompanied by background sounds typical of nighttime, such as crickets.",
+      "steps": 560000,
+      "cfg_scale": 5.0,
+      "filename": "2009-09-08-05-39-52-609_560000_Laughing_Kookaburra_cfg_scale_5.0.wav"
+    },
+    {
+      "label": "Pattern variation",
+      "description": "Established song patterns were improvised or significantly altered.",
+      "steps": 603500,
+      "cfg_scale": 16.0,
+      "filename": "2007-10-24-06-09-54-930_602500_Pied_Currawong_cfg_scale_16.0.wav"
+    },
+    {
+      "label": "Pitch variation",
+      "description": "Birdsong deviated from expected pitch patterns.",
+      "steps": 602500,
+      "cfg_scale": 18.0,
+      "filename": "2007-10-24-06-09-54-930_602500_Pied_Currawong_cfg_scale_18.0.wav"
+    },
+    {
+      "label": "Audio inception",
+      "description": "Swapped voicings, such as bird calls mimicking crickets or cicadas.",
+      "steps": 319200,
+      "cfg_scale": 6.0,
+      "filename": "Australian_Magpie_2020-11-02-15-40-03-298_319200_cfg_scale_6.0.wav"
+    }
+  ]
