@@ -1,0 +1,208 @@
+{
+  "model_type": "diffusion_cond",
+  "sample_size": 1048576,
+  "sample_rate": 44100,
+  "audio_channels": 1,
+  "model": {
+    "pretransform": {
+      "type": "autoencoder",
+      "iterate_batch": true,
+      "config": {
+          "encoder": {
+              "type": "dac",
+              "config": {
+                  "in_channels": 1,
+                  "latent_dim": 128,
+                  "d_model": 128,
+                  "strides": [4, 4, 8, 8]
+              }
+          },
+          "decoder": {
+              "type": "dac",
+              "config": {
+                  "out_channels": 1,
+                  "latent_dim": 64,
+                  "channels": 1536,
+                  "rates": [8, 8, 4, 4]
+              }
+          },
+          "bottleneck": {
+              "type": "vae"
+          },
+          "latent_dim": 64,
+          "downsampling_ratio": 1024,
+          "io_channels": 1
+      }
+  },
+    "conditioning": {
+      "configs": [
+        {
+          "id": "latitude",
+          "type": "number",
+          "config": {
+            "min_val": -54.617412,
+            "max_val": -10.13994
+          }
+        },
+        {
+          "id": "longitude",
+          "type": "number",
+          "config": {
+            "min_val": 96.8233,
+            "max_val": 167.9619
+          }
+        },
+        {
+          "id": "temperature",
+          "type": "number",
+          "config": {
+            "min_val": -10.0,
+            "max_val": 55.0
+          }
+        },
+        {
+          "id": "humidity",
+          "type": "number",
+          "config": {
+            "min_val": 1,
+            "max_val": 100.0
+          }
+        },
+        {
+          "id": "wind_speed",
+          "type": "number",
+          "config": {
+            "min_val": 0,
+            "max_val": 50.0
+          }
+        },
+        {
+          "id": "pressure",
+          "type": "number",
+          "config": {
+            "min_val": 800.0,
+            "max_val": 1200.0
+          }
+        },
+        {
+          "id": "minutes_of_day",
+          "type": "number",
+          "config": {
+            "min_val": 0,
+            "max_val": 1439
+          }
+        },
+        {
+          "id": "day_of_year",
+          "type": "number",
+          "config": {
+            "min_val": 1,
+            "max_val": 366
+          }
+        },
+        {
+          "id": "seconds_start",
+          "type": "number",
+          "config": {
+            "min_val": 0,
+            "max_val": 512
+          }
+        },
+        {
+          "id": "seconds_total",
+          "type": "number",
+          "config": {
+            "min_val": 0,
+            "max_val": 512
+          }
+        }
+      ],
+      "cond_dim": 768
+    },
+    "diffusion": {
+      "cross_attention_cond_ids": ["latitude", "longitude", "temperature", "humidity", "wind_speed", "pressure", "minutes_of_day", "day_of_year","seconds_start", "seconds_total"],
+      "global_cond_ids": ["seconds_start", "seconds_total"],
+      "type": "dit",
+      "config": {
+        "io_channels": 64,
+        "embed_dim": 768,
+        "depth": 24,
+        "num_heads": 24,
+        "cond_token_dim": 768,
+        "global_cond_dim": 1536,
+        "project_cond_tokens": false,
+        "transformer_type": "continuous_transformer"
+      }
+    },
+    "io_channels": 64
+  },
+
+  "training": {
+    "use_ema": true,
+    "log_loss_info": false,
+    "optimizer_configs": {
+      "diffusion": {
+        "optimizer": {
+          "type": "AdamW",
+          "config": {
+            "lr": 5e-5,
+            "betas": [0.9, 0.999],
+            "weight_decay": 1e-3
+          }
+        },
+        "scheduler": {
+          "type": "InverseLR",
+          "config": {
+            "inv_gamma": 1000000,
+            "power": 0.5,
+            "warmup": 0.99
+          }
+        }
+      }
+    },
+    "demo": {
+      "demo_every": 2500,
+      "demo_steps": 100,
+      "num_demos": 3,
+      "demo_cfg_scales": [3, 5, 7],
+      "demo_cond": [
+        {
+          "latitude": -24.005512,
+          "longitude": 133.368348,
+          "temperature": 25.5,
+          "humidity": 60,
+          "wind_speed": 8,
+          "pressure": 1000,
+          "minutes_of_day": 400,
+          "day_of_year": 110,
+          "seconds_start": 0,
+          "seconds_total": 22
+        },
+        {
+          "latitude": -26.987815,
+          "longitude": 153.129068,
+          "temperature": 31.5,
+          "humidity": 70,
+          "wind_speed": 12,
+          "pressure": 1010,
+          "minutes_of_day": 600,
+          "day_of_year": 57,
+          "seconds_start": 0,
+          "seconds_total": 22
+        },
+        {
+          "latitude": -12.546364,
+          "longitude": 130.919605,
+          "temperature": 28.5,
+          "humidity": 60,
+          "wind_speed": 18,
+          "pressure": 1015,
+          "minutes_of_day": 1140,
+          "day_of_year": 280,
+          "seconds_start": 0,
+          "seconds_total": 22
+        }
+      ]
+    }
+  }
+}
