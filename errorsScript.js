@@ -35,16 +35,6 @@ fetch("audio_errors.json")
       descriptionPara.textContent = errorItem.description;
       errorEntry.appendChild(descriptionPara);
 
-      // Steps
-      const stepsPara = document.createElement("p");
-      stepsPara.innerHTML = `<strong>Steps (Training):</strong> ${errorItem.steps}`;
-      errorEntry.appendChild(stepsPara);
-
-      // CFG Scale
-      const cfgScalePara = document.createElement("p");
-      cfgScalePara.innerHTML = `<strong>CFG Scale:</strong> ${errorItem.cfg_scale}`;
-      errorEntry.appendChild(cfgScalePara);
-
       // Waveform container
       const waveformContainer = document.createElement("div");
       waveformContainer.className = "waveform-container";

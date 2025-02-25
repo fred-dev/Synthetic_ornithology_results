@@ -1,44 +1,66 @@
 [
     {
-      "label": "Song transfer",
-      "description": "The song patterns of one bird species were reproduced using the voice of another.",
-      "steps": 560000,
-      "cfg_scale": 5.0,
-      "filename": "2007-10-24-06-09-54-930_560000_Pied_Currawong_cfg_scale_5.0.wav"
-    },
-    {
-      "label": "Layering",
-      "description": "Bird calls that would not normally co-occur appeared together in generated samples.",
-      "steps": 394800,
-      "cfg_scale": 4.0,
-      "filename": "Australian_Magpie_2020-11-02-15-40-03-298_394800_cfg_scale_4.0.wav"
-    },
-    {
-      "label": "Background variation",
-      "description": "Birds singing during daytime accompanied by background sounds typical of nighttime, such as crickets.",
-      "steps": 560000,
-      "cfg_scale": 5.0,
-      "filename": "2009-09-08-05-39-52-609_560000_Laughing_Kookaburra_cfg_scale_5.0.wav"
-    },
-    {
-      "label": "Pattern variation",
-      "description": "Established song patterns were improvised or significantly altered.",
-      "steps": 603500,
-      "cfg_scale": 16.0,
-      "filename": "2007-10-24-06-09-54-930_602500_Pied_Currawong_cfg_scale_16.0.wav"
-    },
-    {
-      "label": "Pitch variation",
-      "description": "Birdsong deviated from expected pitch patterns.",
+      "label": "Example 1",
+      "description": "Incorrect echoes from birdcall.",
       "steps": 602500,
-      "cfg_scale": 18.0,
-      "filename": "2007-10-24-06-09-54-930_602500_Pied_Currawong_cfg_scale_18.0.wav"
+      "cfg_scale": 16.0,
+      "filename": "2020-08-24-05-40-08-786_602500_Pied_Butcherbird_cfg_scale_10.0.wav"
     },
     {
-      "label": "Audio inception",
-      "description": "Swapped voicings, such as bird calls mimicking crickets or cicadas.",
-      "steps": 319200,
+      "label": "Example 2",
+      "description": "Morphing bird calls.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "0001.wav"
+    },
+    {
+      "label": "Example 3",
+      "description": "Synthetic jittering calls.",
+      "steps": 602500,
       "cfg_scale": 6.0,
-      "filename": "Australian_Magpie_2020-11-02-15-40-03-298_319200_cfg_scale_6.0.wav"
+      "filename": "2020-08-28-21-40-09-595_602500_Spotted_Nightjar_cfg_scale_13.0.wav"
+    },
+    {
+      "label": "Example 4",
+      "description": "Metallic and varying timbre and call.",
+      "steps": 602500,
+      "cfg_scale": 13.0,
+      "filename": "173876741_602500_Laughing_Kookaburra_cfg_scale_21.0.wav"
+    },
+    {
+      "label": "Example 5",
+      "description": "Warbling and intense background sounds.",
+      "steps": 602500,
+      "cfg_scale": 8.0,
+      "filename": "demo_cfg_3_15918_bd9967d91eaa33763656-03.wav"
+    },
+    {
+      "label": "Example 6",
+      "description": "Wind timbre owl calls.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "demo_cfg_3_23427_4f2e6e6d0f8f85504e67-02.wav"
+    },
+    {
+      "label": "Example 7",
+      "description": "Chaotic mixed bird calls.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "demo_cfg_3_25730_30a55bb875bd8229a0a5-03.wav"
+    },
+    {
+      "label": "Example 8",
+      "description": "Wind morphs to bird calls.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "demo_cfg_3_30036_f46d791d04a889a862a5-02.wav"
+    },
+    {
+      "label": "Example 9",
+      "description": "Heavily layered mixed birds and backgrounds.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "demo_cfg_5_23028_a5e7a9391deb366b2a8f-03.wav"
     }
+
   ]
