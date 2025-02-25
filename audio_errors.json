@@ -61,6 +61,13 @@
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "demo_cfg_5_23028_a5e7a9391deb366b2a8f-03.wav"
+    },
+    {
+      "label": "Example 10",
+      "description": "Incorrect Magpie call.",
+      "steps": 645000,
+      "cfg_scale": 4.0,
+      "filename": "Australian_Magpie_2020-11-02-15-40-03-298_394800_cfg_scale_4.0.wav"
     }
 
   ]
