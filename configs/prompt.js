@@ -3,7 +3,7 @@ const prompt = `
 
     Indigenous history researcher task: Find information about the traditional owners of the land, including tribe and or clan only (do not use English translations of clan names). Check this information thoroughly as it cannot be erroneous. 
 
-    Environment classification task: Find information about the local environment, is it a desert, coastal town, grasslands.
+    Environment classification task: Find information about the local environment, is it a desert, coastal town, grasslands or any other environment type.
 
     Climate research task: taking the given location, date and time, decide whether the proposed conditions are normal or unusual, for all individual conditions, as well as the complete group, it could be slightly hotter than expected for that date, time and location, windier, more humid. Consider the conditions individually and as a whole and describe their relative difference. This might take the form: An unusually hot day, or indicating a storm, unusual for this time of year. 
 
