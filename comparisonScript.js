@@ -89,43 +89,64 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             pairContainer.appendChild(conditionContainer);
             container.appendChild(pairContainer);
 
-            // Create WaveSurfer instances with media controls
-            const originalWaveSurfer = WaveSurfer.create({
-                container: `#waveform-original-${pair.pair}`,
-                waveColor: "violet",
-                progressColor: "purple",
-                height: 100,
-                normalize: false,
-                mediaControls: true,
-                interact: true,
-                fillParent: true,
-                autoCenter: true,
-                hideScrollbar: false,
-            });
-            const generatedWaveSurfer = WaveSurfer.create({
-                container: `#waveform-generated-${pair.pair}`,
-                waveColor: "orange",
-                progressColor: "red",
-                height: 100,
-                normalize: false,
-                mediaControls: true,
-                interact: true,
-                fillParent: true,
-                autoCenter: true,
-                hideScrollbar: false,
-            });
-
-            // Load audio files
-            originalWaveSurfer.load(rootPathPairs + pair.original);
-            generatedWaveSurfer.load(rootPathPairs + pair.generated);
-
-            // Add instances to the array
-            waveSurfers.push(originalWaveSurfer, generatedWaveSurfer);
-
-            // Add event listeners to stop all other audio before playing
-            originalWaveSurfer.on("play", () => stopAllExcept(originalWaveSurfer));
-            generatedWaveSurfer.on("play", () => stopAllExcept(generatedWaveSurfer));
-
+            const createWaveSurferStereo = async (containerId, waveColor, progressColor, audioUrl) => {
+                // Create WaveSurfer instance with media controls
+                const waveSurfer = WaveSurfer.create({
+                    container: containerId,
+                    waveColor,
+                    progressColor,
+                    url: audioUrl,
+                    mediaControls: true,
+                    backend: 'MediaElement', // use MediaElement backend directly
+                    height: 100,
+                    splitChannels: false,
+                    interact: true,
+                    autoCenter: true,
+                });
+            
+                waveSurfer.once('ready', () => {
+                    const audioContext = new AudioContext();
+                    const mediaElement = waveSurfer.getMediaElement();
+                    const sourceNode = audioContext.createMediaElementSource(mediaElement);
+            
+                    // Create a channel splitter and merger for mono-to-stereo
+                    const splitter = audioContext.createChannelSplitter(2);
+                    const merger = audioContext.createChannelMerger(2);
+            
+                    sourceNode.connect(splitter);
+            
+                    // If mono, duplicate channel 0 into both left and right
+                    splitter.connect(merger, 0, 0); // Left
+                    splitter.connect(merger, 0, 1); // Right
+            
+                    merger.connect(audioContext.destination);
+                });
+            
+                return waveSurfer;
+            };
+            
+            // Integrate with your existing setup
+            (async () => {
+                const originalWaveSurfer = await createWaveSurferStereo(
+                    `#waveform-original-${pair.pair}`,
+                    "violet",
+                    "purple",
+                    rootPathPairs + pair.original
+                );
+            
+                const generatedWaveSurfer = await createWaveSurferStereo(
+                    `#waveform-generated-${pair.pair}`,
+                    "orange",
+                    "red",
+                    rootPathPairs + pair.generated
+                );
+            
+                waveSurfers.push(originalWaveSurfer, generatedWaveSurfer);
+            
+                originalWaveSurfer.on("play", () => stopAllExcept(originalWaveSurfer));
+                generatedWaveSurfer.on("play", () => stopAllExcept(generatedWaveSurfer));
+            })();
+            
             // Add player controls
             const originalControls = document.createElement("div");
             originalControls.className = "player-controls";

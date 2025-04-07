@@ -68,20 +68,34 @@ fetch("audio_interesting.json")
         progressColor: "purple",
         height: 100,
         normalize: false,
-        mediaControls: true, // Provides a native audio control bar
+        mediaControls: true,
         interact: true,
         fillParent: true,
         autoCenter: true,
         hideScrollbar: false,
+        backend: 'MediaElement', // Use MediaElement backend for simplicity
       });
-
-      // Load the audio file using root path + filename
+      
       waveSurfer.load(rootPathErrors + errorItem.filename);
-
-      // Keep track of this WaveSurfer instance
+      
+      waveSurfer.once('ready', () => {
+        const audioContext = new AudioContext();
+        const mediaElement = waveSurfer.getMediaElement();
+        const sourceNode = audioContext.createMediaElementSource(mediaElement);
+      
+        const splitter = audioContext.createChannelSplitter(2);
+        const merger = audioContext.createChannelMerger(2);
+      
+        sourceNode.connect(splitter);
+      
+        splitter.connect(merger, 0, 0); // Duplicate left channel
+        splitter.connect(merger, 0, 1); // Duplicate to right channel
+      
+        merger.connect(audioContext.destination);
+      });
+      
       waveSurfers.push(waveSurfer);
-
-      // Stop all other WaveSurfers when a new one starts to play
+      
       waveSurfer.on("play", () => stopAllExcept(waveSurfer));
     });
   })
