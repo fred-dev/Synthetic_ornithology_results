@@ -1,70 +1,70 @@
 [
     {
-      "label": "Example 1",
-      "description": "Incorrect echoes from birdcall.",
+      "label": "Example 1: Mismatched echoes",
+      "description": "Bird calls are accompanied by echo patterns that appear spatially or acoustically inconsistent with the source material.",
       "steps": 602500,
       "cfg_scale": 16.0,
       "filename": "2020-08-24-05-40-08-786_602500_Pied_Butcherbird_cfg_scale_10.0.wav"
     },
     {
-      "label": "Example 2",
-      "description": "Morphing bird calls.",
+      "label": "Example 2: Morphing calls",
+      "description": "Bird calls shift or transform over time, blurring the boundary between distinct vocal qualities.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "0001.wav"
     },
     {
-      "label": "Example 3",
-      "description": "Synthetic jittering calls.",
+      "label": "Example 3: Synthetic jitter",
+      "description": "Calls contain rapid jittering artefacts that reveal instability in the generated vocal texture.",
       "steps": 602500,
       "cfg_scale": 6.0,
       "filename": "2020-08-28-21-40-09-595_602500_Spotted_Nightjar_cfg_scale_13.0.wav"
     },
     {
-      "label": "Example 4",
-      "description": "Metallic and varying timbre and call.",
+      "label": "Example 4: Metallic timbre",
+      "description": "Bird calls take on metallic or unstable timbral qualities that depart from naturalistic vocalisation.",
       "steps": 602500,
       "cfg_scale": 13.0,
       "filename": "173876741_602500_Laughing_Kookaburra_cfg_scale_21.0.wav"
     },
     {
-      "label": "Example 5",
-      "description": "Warbling and intense background sounds.",
+      "label": "Example 5: Warbling backgrounds",
+      "description": "Background textures become exaggerated, unstable, or overly intense, competing with the foreground bird calls.",
       "steps": 602500,
       "cfg_scale": 8.0,
       "filename": "demo_cfg_3_15918_bd9967d91eaa33763656-03.wav"
     },
     {
-      "label": "Example 6",
-      "description": "Wind timbre owl calls.",
+      "label": "Example 6: Wind-coloured owl calls",
+      "description": "Owl-like calls appear to merge with wind-like timbres, producing an ambiguous hybrid texture.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "demo_cfg_3_23427_4f2e6e6d0f8f85504e67-02.wav"
     },
     {
-      "label": "Example 7",
-      "description": "Chaotic mixed bird calls.",
+      "label": "Example 7: Chaotic mixed calls",
+      "description": "Multiple bird calls overlap in ways that produce a dense, chaotic, or ecologically implausible soundscape.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "demo_cfg_3_25730_30a55bb875bd8229a0a5-03.wav"
     },
     {
-      "label": "Example 8",
-      "description": "Wind morphs to bird calls.",
+      "label": "Example 8: Wind-to-call morphing",
+      "description": "Wind-like background textures appear to transform into bird-call material, blurring the distinction between environment and vocalisation.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "demo_cfg_3_30036_f46d791d04a889a862a5-02.wav"
     },
     {
-      "label": "Example 9",
-      "description": "Heavily layered mixed birds and backgrounds.",
+      "label": "Example 9: Over-layered soundscape",
+      "description": "Bird calls and background textures are heavily layered, producing an overly dense soundscape with reduced ecological clarity.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "demo_cfg_5_23028_a5e7a9391deb366b2a8f-03.wav"
     },
     {
-      "label": "Example 10",
-      "description": "Incorrect Magpie call.",
+      "label": "Example 10: Misidentified Magpie call",
+      "description": "The generated call is is Magpie-like, but does not match the expected vocal pattern closely.",
       "steps": 645000,
       "cfg_scale": 4.0,
       "filename": "Australian_Magpie_2020-11-02-15-40-03-298_394800_cfg_scale_4.0.wav"

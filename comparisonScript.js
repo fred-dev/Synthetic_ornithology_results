@@ -18,7 +18,7 @@ fetch("audio_pairs.json") // Use the updated JSON with additional metadata
             pairContainer.className = "pair-container";
 
             const heading = document.createElement("h2");
-            heading.textContent = `Recorded species: ${pair.name}`;
+            heading.textContent = `Comparison sample: ${pair.name}`;
             pairContainer.appendChild(heading);
 
             const conditionContainer = document.createElement("div");
