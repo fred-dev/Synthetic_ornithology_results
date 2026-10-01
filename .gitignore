@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# OS / editor
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+.idea/
